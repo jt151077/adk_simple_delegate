@@ -13,6 +13,7 @@ echo "$GOOGLE_CLOUD_PROJECT"
 echo "$GOOGLE_CLOUD_PROJECT_NUMBER"
 echo "$GEMINI_ENT_REGION"
 echo "$AUTH_ID"
+echo "$CLIENT_ID"
 
 
 http_response=$(curl -X POST \

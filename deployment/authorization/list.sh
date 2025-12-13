@@ -4,14 +4,13 @@
 GOOGLE_CLOUD_PROJECT=$(grep '^GOOGLE_CLOUD_PROJECT=' .env | cut -d '=' -f 2-)
 GOOGLE_CLOUD_PROJECT_NUMBER=$(grep '^GOOGLE_CLOUD_PROJECT_NUMBER=' .env | cut -d '=' -f 2-)
 AUTH_ID=$(grep '^AUTH_ID=' .env | cut -d '=' -f 2-)
-GEMINI_ENT_REGION=$(grep '^GEMINI_ENT_REGION=' .env | cut -d '=' -f 2-)
 
 
-http_response=$(curl -X DELETE \
+http_response=$(curl -X GET \
    -H "Authorization: Bearer $(gcloud auth print-access-token)" \
    -H "Content-Type: application/json" \
    -H "X-Goog-User-Project: ${GOOGLE_CLOUD_PROJECT}" \
-   "https://discoveryengine.googleapis.com/v1alpha/projects/${GOOGLE_CLOUD_PROJECT_NUMBER}/locations/${GEMINI_ENT_REGION}/authorizations/${AUTH_ID}"
+   "https://discoveryengine.googleapis.com/v1alpha/projects/${GOOGLE_CLOUD_PROJECT_NUMBER}/locations/global/authorizations"
 )
 
 
