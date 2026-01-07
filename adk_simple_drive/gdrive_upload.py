@@ -19,7 +19,7 @@ from PIL import Image
 # --- Configuration ---
 SCOPES = ["https://www.googleapis.com/auth/drive"]
 
-AGENTSPACE_AUTH_ID = "adk_simple_delegate"  # Do not change this, otherwise other activity tracking fails
+AGENTSPACE_AUTH_ID = "adk_simple_drive"  # Do not change this, otherwise other activity tracking fails
 
 
 if not AGENTSPACE_AUTH_ID:
@@ -41,6 +41,9 @@ def get_access_token(tool_context: ToolContext, auth_id: str) -> str | None:
     logging.warning(f"Access token not found for AGENTSPACE_AUTH_ID='{auth_id}' in tool_context.state")
     logging.warning(f"Available state keys: {list(state_dict.keys())}") 
     return None
+
+
+
 
 
 def upload_text_to_drive(tool_context: ToolContext, text_content: str) -> str:

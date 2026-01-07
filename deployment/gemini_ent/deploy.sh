@@ -48,15 +48,16 @@ http_response=$(curl -X POST \
     },
     "provisioned_reasoning_engine": {
       "reasoning_engine": ${AGENT_ENGINE_RESOURCE_NAME}
-    },
-    "authorizations": [
-        "projects/${GOOGLE_CLOUD_PROJECT_NUMBER}/locations/${GEMINI_ENT_REGION}/authorizations/${AUTH_ID}"
+    }
+  },
+  "authorization_config": {
+    "tool_authorizations": [
+      "projects/${GOOGLE_CLOUD_PROJECT_NUMBER}/locations/${GEMINI_ENT_REGION}/authorizations/${AUTH_ID}"
     ]
   }
 }
 EOF
 )
-
 
 
 KEY_TO_SET="GEMINI_ENT_AGENT_NAME"

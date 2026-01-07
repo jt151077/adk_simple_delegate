@@ -1,5 +1,5 @@
 import asyncio
-from adk_simple_delegate.agent import root_agent
+from adk_simple_drive.agent import root_agent
 from vertexai.preview.reasoning_engines import AdkApp
 
 async def main():

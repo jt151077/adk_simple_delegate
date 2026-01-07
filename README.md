@@ -29,7 +29,7 @@ GOOGLE_CLOUD_LOCATION=<YOUR_GCP_REGION>
 AGENT_VERSION=x.x.x
 GEMINI_ENT_REGION=global
 AGENT_ENGINE_NAME='<THE_AGENT_NAME>' ## this will be the name visible in Agent Engine
-AUTH_ID=adk_simple_delegate ## keep this value
+AUTH_ID=adk_simple_drive ## keep this value
 GEMINI_ENT_DISPLAY_NAME='<THE_AGENT_NAME>' ## this will be the agent name in Agent Space
 GEMINI_ENT_AGENT_DESCRIPTION='<THE_AGENT_DESCRIPTION>' ## this will be the agent description in Agent Space
 GEMINI_ENT_APP_NAME=<GEMINI_ENTREPRISE_APP_ID>
@@ -62,7 +62,7 @@ It will try to save the output on gDrive but this fail. However this feature wil
 4. You can also test (locally and remotely) the Agent from the command line and/or deploy it via the following commands:
 
 ```shell
-uv run adk_simple_delegate/test_local.py
+uv run adk_simple_drive/test_local.py
 uv run deployment/agent_engine/deploy.py
 ```
 

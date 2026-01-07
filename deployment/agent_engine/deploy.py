@@ -17,7 +17,7 @@ import vertexai
 import logging
 from vertexai import agent_engines
 from dotenv import load_dotenv, set_key, find_dotenv, unset_key
-from adk_simple_delegate.agent import root_agent
+from adk_simple_drive.agent import root_agent
 from vertexai.preview.reasoning_engines import AdkApp
 
 
@@ -65,7 +65,7 @@ else:
         agent_engine=app,
         requirements=requirements,
         extra_packages = [
-            "./adk_simple_delegate",
+            "./adk_simple_drive",
         ],
     )
 

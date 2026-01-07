@@ -1,5 +1,5 @@
 [project]
-name = "adk_simple_delegate"
+name = "adk_simple_drive"
 version = "0.1.0"
 description = "ADK Agent that recommends food"
 readme = "README.md"
@@ -25,4 +25,4 @@ dependencies = []
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["adk_simple_delegate*"]
+include = ["adk_simple_drive*"]
